@@ -1,9 +1,11 @@
 <?php
 
+  $url = $_GET['url'];
+  $command = $_GET['command'];
   $station = $_GET['station'];
   $state = $_GET['state'];
 
-  $service_url = 'http://192.168.2.79/d/' . $station . '/' . $state;
+  $service_url = 'http://' . $url . '/' . $command . '/' . $station . '/' . $state;
   $curl = curl_init($service_url);
    
   curl_setopt($curl, CURLOPT_IPRESOLVE, CURL_IPRESOLVE_V4 ); 
@@ -12,5 +14,7 @@
 
   $curl_response = curl_exec($curl);
   curl_close($curl);
+
+//  echo $curl_response;
 
 ?>
