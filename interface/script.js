@@ -1,4 +1,7 @@
-setInterval(function() {
+window.setInterval(function() {
+	$.ajaxSetup({
+		cache: false
+	});
 
 	$.get("curl.php", {station: "r", state: ""}, function(data) { 
         	json_data = jQuery.parseJSON(data);
