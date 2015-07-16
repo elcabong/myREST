@@ -1,18 +1,13 @@
 // window.setInterval(get_device_status, 1000);
 
-window.onload = refresh_device_status;
-
-function refresh_device_status() {
-        get_device_status();
-        window.setTimeout(refresh_device_status, 1000);
-}
+window.onload = get_device_status;
 
 function get_device_status() {
 	$.ajaxSetup({
 	  cache: false
 	});
 
-	$.get("curl.php", {url: "192.168.2.79", command: "dim", station: "r", state: ""}, function(data) { 
+	$.get("curl.php", {url: "192.168.2.79", command: "dim", station: "r", state: ""}, function(data) {
         	json_data = jQuery.parseJSON(data);
 
 		if (json_data.ack == "ok") {
@@ -319,7 +314,7 @@ function get_device_status() {
                         $("#32").addClass("on-button-active");
                 }
 
-	}); 
+	}).done(setTimeout(get_device_status, 5000)); 
 
 }
 
