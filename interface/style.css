@@ -1,4 +1,4 @@
-body {
+body,html,div {
     font-family: 'Courier New';
 }
 
@@ -21,68 +21,46 @@ body {
 }
 
 
-.off-button-inactive {
+.button {
   -webkit-border-radius: 28;
   -moz-border-radius: 28;
   border-radius: 28px;
   font-family: Courier New;
   color: #ffffff;
   font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none; 
+}
+
+.off {
   background: #de9292;
-  padding: 10px 20px 10px 20px;
-  text-decoration: none;
 }
-.off-button-inactive:hover {
+.off:hover {
   background: #ff0000;
   text-decoration: none;
 }
 
-.off-button-active {
-  -webkit-border-radius: 28;
-  -moz-border-radius: 28;
-  border-radius: 28px;
-  font-family: Courier New;
-  color: #ffffff;
-  font-size: 20px;
+.off.active {
   background: #ff0000;
-  padding: 10px 20px 10px 20px;
   border: solid #000000 2px;
-  text-decoration: none;
 }
-.off-button-active:hover {
+.off.active:hover {
   text-decoration: none;
 }
 
 
-.on-button-inactive {
-  -webkit-border-radius: 28;
-  -moz-border-radius: 28;
-  border-radius: 28px;
-  font-family: Courier New;
-  color: #ffffff;
-  font-size: 20px;
+.on {
   background: #74cf74;
-  padding: 10px 20px 10px 20px;
-  text-decoration: none;
 }
-.on-button-inactive:hover {
+.on:hover {
   background: #007f00;
-  text-decoration: none;
 }
 
-.on-button-active {
-  -webkit-border-radius: 28;
-  -moz-border-radius: 28;
-  border-radius: 28px;
-  font-family: Courier New;
-  color: #ffffff;
-  font-size: 20px;
+.on.active {
   background: #007f00;
-  padding: 10px 20px 10px 20px;
   border: solid #000000 2px;
-  text-decoration: none;
 }
-.on-button-active:hover {
+.on.active:hover {
   text-decoration: none;
 }
 

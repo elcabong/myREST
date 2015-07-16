@@ -26,44 +26,20 @@ function get_device_status() {
 
 		switch(json_data.Dim0) {
 		  case "1":
-                    $("#1").removeClass("off-button-active");
-       	            $("#1").addClass("off-button-inactive");
-               	    $("#2").removeClass("on-button-inactive");
-                    $("#2").addClass("on-button-active");
-                    $("#3").removeClass("on-button-active");
-       	            $("#3").addClass("on-button-inactive");
-               	    $("#4").removeClass("on-button-active");
-                    $("#4").addClass("on-button-inactive");
+					$("#L1 .button").removeClass("active");
+					$("#2").addClass("active");
 		    break;
 		  case "5":
-                    $("#1").removeClass("off-button-active");
-       	            $("#1").addClass("off-button-inactive");
-               	    $("#2").removeClass("on-button-active");
-                    $("#2").addClass("on-button-inactive");
-                    $("#3").removeClass("on-button-inactive");
-       	            $("#3").addClass("on-button-active");
-               	    $("#4").removeClass("on-button-active");
-                    $("#4").addClass("on-button-inactive");
+					$("#L1 .button").removeClass("active");
+					$("#3").addClass("active");		  
 		    break;
 		  case "on":
-                    $("#1").removeClass("off-button-active");
-                    $("#1").addClass("off-button-inactive");
-                    $("#2").removeClass("on-button-active");
-                    $("#2").addClass("on-button-inactive");
-                    $("#3").removeClass("on-button-active");
-                    $("#3").addClass("on-button-inactive");
-                    $("#4").removeClass("on-button-inactive");
-                    $("#4").addClass("on-button-active");
+					$("#L1 .button").removeClass("active");
+					$("#4").addClass("active");		  
 		    break;
                   case "off":
-                    $("#1").removeClass("off-button-inactive");
-                    $("#1").addClass("off-button-active");
-                    $("#2").removeClass("on-button-active");
-                    $("#2").addClass("on-button-inactive");
-                    $("#3").removeClass("on-button-active");
-                    $("#3").addClass("on-button-inactive");
-                    $("#4").removeClass("on-button-active");
-                    $("#4").addClass("on-button-inactive");
+                   $("#L1 .button").removeClass("active");
+                    $("#1").addClass("active");		 
 		    break;
 		}
                 switch(json_data.Dim1) {
