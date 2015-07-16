@@ -1,8 +1,7 @@
-// window.setInterval(get_device_status, 1000);
+setTimeout(get_device1_status, 1000);
+setTimeout(get_device2_status, 1500)
 
-window.onload = get_device_status;
-
-function get_device_status() {
+function get_device1_status() {
 	$.ajaxSetup({
 	  cache: false
 	});
@@ -251,7 +250,13 @@ function get_device_status() {
                     break;
                 }
 
-  	});
+	}).done(setTimeout(get_device1_status, 2000)); 
+}
+
+function get_device2_status() {
+	$.ajaxSetup({
+	  cache: false
+	});
 
         $.get("curl.php", {url: "192.168.2.162", command: "d", station: "r", state: ""}, function(data) {
                 json_data = jQuery.parseJSON(data);
@@ -314,7 +319,7 @@ function get_device_status() {
                         $("#32").addClass("on-button-active");
                 }
 
-	}).done(setTimeout(get_device_status, 5000)); 
+	}).done(setTimeout(get_device2_status, 2000)); 
 
 }
 
