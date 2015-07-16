@@ -24,25 +24,28 @@ function get_device_status() {
 		  $("#lightStatus").css("color", "red");
 		}
 
+		/* use this switch as an example for the rest  */
 		switch(json_data.Dim0) {
 		  case "1":
-					$("#L1 .button").removeClass("active");
-					$("#2").addClass("active");
+                    $("#L1 .button").removeClass("active");
+                    $("#2").addClass("active");
 		    break;
 		  case "5":
-					$("#L1 .button").removeClass("active");
-					$("#3").addClass("active");		  
+                    $("#L1 .button").removeClass("active");
+                    $("#3").addClass("active");		  
 		    break;
 		  case "on":
-					$("#L1 .button").removeClass("active");
-					$("#4").addClass("active");		  
+                    $("#L1 .button").removeClass("active");
+                    $("#4").addClass("active");		  
 		    break;
                   case "off":
-                   $("#L1 .button").removeClass("active");
+                    $("#L1 .button").removeClass("active");
                     $("#1").addClass("active");		 
 		    break;
 		}
-                switch(json_data.Dim1) {
+		
+		
+        switch(json_data.Dim1) {
 		  case "3":
                     $("#5").removeClass("off-button-active");
                     $("#5").addClass("off-button-inactive");
